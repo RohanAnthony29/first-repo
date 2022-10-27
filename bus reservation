@@ -1,0 +1,68 @@
+package com.javaprojects;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BusDemo {
+
+    public static void main(String[] args) {
+	// write your code here
+        /*Passanger Name
+        Bus Number
+        Date
+         */
+        //Bus buses[]=new Bus[50];
+        System.out.println("Welcome to Rohan Travels");
+        System.out.println("The List Of Buses and Available destinations");
+
+        ArrayList<Bus>buses=new ArrayList<>();
+        ArrayList<Booking>booking=new ArrayList<>();
+
+        buses.add(new Bus(1,true, 50,"Chennai-Tirunelveli"));
+        buses.add(new Bus(2,false,39,"Chennai-Bangalore"));
+        buses.add(new Bus(3,true, 50,"Chennai-Kanyakumari"));
+        buses.add(new Bus(4,true, 40,"Chennai-Thrichirapalli"));
+        buses.add(new Bus(5,true, 60,"Chennai-Hyderabad"));
+
+        Scanner in=new Scanner(System.in);
+        int useroption=1;
+
+        for(Bus B:buses){
+            B.displaybusinfo();
+        }
+        //System.out.println("Enter 1 to Book and 2 to Exit");
+        while(useroption==1) {
+            System.out.println("Enter 1 to Book and 2 to Exit");
+            useroption = in.nextInt();
+
+            //System.out.println("Enter 1 to Book and 2 to Exit");
+
+            if(useroption==1) {
+
+                 Booking book=new Booking();
+
+                 if(Booking.isAvailable(booking,buses)) {
+                     booking.add(book);
+                     System.out.println("Your Booking is Confirmed Thank You!!");
+                 }else{
+                     System.out.println("Sorry The Bus is Full Try anoher date");
+                 }
+
+
+
+            }else if(useroption==2) {
+                System.out.println("Thank you Please visit Agian");
+            }else{
+                System.out.println("Enter a Valid Number");
+
+            }
+
+            }
+            }
+        }
+//        Bus bus=new Bus();
+//        Booking booking=new Booking();
+
+
+
