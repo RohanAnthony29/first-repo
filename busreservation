@@ -1,0 +1,52 @@
+package com.javaprojects;
+
+import javax.print.attribute.standard.Destination;
+
+public class Bus {
+    private int Bus_No;
+    private boolean Ac;
+    private int capacity;
+    private String Destination;
+Bus(int  Bus_No,boolean Ac,int capacity,String Destination){
+    this.Ac=Ac;
+    this.Bus_No=Bus_No;
+    this.capacity=capacity;
+    this.Destination=Destination;
+}
+
+    public int getCapacity() {//accessor meathod
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {//mutator
+        this.capacity = capacity;
+    }
+
+    public int getBus_No() {
+        return Bus_No;
+    }
+
+    public boolean isAc() {
+        return Ac;
+    }
+
+    public void setAc(boolean ac) {
+        Ac = ac;
+    }
+
+    public void setBus_No(int bus_No) {
+        Bus_No = bus_No;
+    }
+    public String setDestination( ){
+    return Destination;
+    }
+    public void getDestination( String destination){
+    Destination=destination;
+    }
+
+    public void displaybusinfo(){
+
+       System.out.println("BusNo:"+Bus_No+  " Destination: " +Destination+" Ac "+Ac+" Seatsavailable: "+capacity);
+    }
+
+}
